@@ -2,7 +2,7 @@
 
 cd `dirname ${0}`
 
-which fbautostart > /dev/null && CC="clang" || CC="cc"
+which clang > /dev/null && CC="clang" || CC="cc"
 CC_FLAGS="-std=c99 -Wall -Wextra -Wpedantic"
 
 ${CC} ${CC_FLAGS} SIR.c -o `systemd-path temporary`/SIR -lm && {
